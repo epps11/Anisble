@@ -1,9 +1,10 @@
 ---
-- hosts: all
+- hosts: '*'
   #remote_user: root
 
   tasks:
   - name: Upgrade all packages
     yum:
-    name: '*'
-    state: latest
+        name: '*'
+        state: latest
+        become: true
