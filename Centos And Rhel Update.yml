@@ -1,0 +1,9 @@
+- name: Centos And RHEL Update
+  hosts: all
+ 
+  tasks:
+ 
+- name: upgrade all packages
+  yum:
+    name: '*'
+    state: latest
