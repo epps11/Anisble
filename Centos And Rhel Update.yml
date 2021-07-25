@@ -1,9 +1,9 @@
-- name: Centos And RHEL Update
-  hosts: all
- 
+---
+- hosts: all
+  remote_user: root
+  become: yes
   tasks:
- 
-        - name: upgrade all packages
-        yum:
-        name: '*'
-        state: latest
+- name: upgrade all packages
+  yum:
+  name: '*'
+  state: latest
